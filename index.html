@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Charles Mukwevho - Software Developer, Software Development Lecturer and AI Engineering Enthusiast">
+<title>Charles Mukwevho | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+:root{
+    --primary:#4f46e5;
+    --primary-light:#eef2ff;
+    --secondary:#6366f1;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --border:#e5e7eb;
+    --bg:#f5f7fb;
+    --card:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:25px;
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:25px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:24px;
+    padding:30px;
+    position:sticky;
+    top:20px;
+    height:fit-content;
+    box-shadow:0 5px 20px rgba(0,0,0,.03);
+}
+
+.profile-img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+    border:4px solid #fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.sidebar h1{
+    font-size:2rem;
+    line-height:1.2;
+    margin-bottom:10px;
+}
+
+.role{
+    color:#374151;
+    font-weight:500;
+    margin-bottom:10px;
+}
+
+.location{
+    color:var(--muted);
+    font-size:.95rem;
+    margin-bottom:20px;
+}
+
+.socials{
+    display:flex;
+    gap:16px;
+    margin-bottom:35px;
+}
+
+.socials a{
+    color:#4b5563;
+    font-size:1.2rem;
+    transition:.3s;
+}
+
+.socials a:hover{
+    color:var(--primary);
+    transform:translateY(-3px);
+}
+
+.side-title{
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#9ca3af;
+    margin-bottom:14px;
+}
+
+.about{
+    font-size:.95rem;
+    margin-bottom:35px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:var(--primary-light);
+    color:var(--primary);
+    padding:6px 12px;
+    border-radius:50px;
+    font-size:.8rem;
+    font-weight:500;
+}
+
+.cv-btn{
+    display:block;
+    text-align:center;
+    margin-top:25px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    padding:12px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.cv-btn:hover{
+    background:var(--secondary);
+}
+
+/* MAIN CONTENT */
+
+.content{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.section-label{
+    color:#9ca3af;
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:15px;
+}
+
+/* PROJECTS */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px;
+}
+
+.project-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+.project-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    background:#f8fafc;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+    font-size:1.1rem;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.tags span{
+    background:var(--primary-light);
+    color:var(--primary);
+    border-radius:50px;
+    padding:5px 10px;
+    font-size:.75rem;
+}
+
+.project-content p{
+    color:var(--muted);
+    font-size:.95rem;
+}
+
+.read-more{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:600;
+}
+
+/* INFO CARDS */
+
+.info-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:30px;
+}
+
+.info-card h3{
+    margin-bottom:10px;
+}
+
+.date{
+    color:var(--muted);
+    margin-bottom:8px;
+    font-size:.9rem;
+}
+
+.tech-summary{
+    margin-top:20px;
+    padding:15px;
+    border-radius:50px;
+    background:var(--primary-light);
+    color:var(--primary);
+    font-weight:500;
+    text-align:center;
+}
+
+/* EDUCATION */
+
+.education-entry{
+    margin-bottom:30px;
+}
+
+.education-entry:last-child{
+    margin-bottom:0;
+}
+
+.education-entry p{
+    color:var(--muted);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:var(--muted);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.sidebar{
+    position:relative;
+    top:0;
+}
+
+.projects-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <img src="IMG_1635.JPG" alt="Charles Mukwevho" class="profile-img">
+
+        <h1>Charles Mukwevho</h1>
+
+        <p class="role">
+            Software Developer | AI Engineering Enthusiast
+        </p>
+
+        <p class="location">
+            Based in Pretoria, South Africa
+        </p>
+
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/mukhethwa-mukwevho-921027241/g" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Frenkiebiggie21" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:frenkiebiggie21@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <div class="side-title">ABOUT</div>
+
+        <p class="about">
+           I'm a software development professional who enjoys learning by building personal projects, solving technical problems, and exploring how technology can be used in practical ways. My background includes Python, JavaScript, APIs, databases, and application development.
+
+I'm currently interested in AI engineering, particularly how intelligent systems can use information, interact with tools, and make useful decisions within defined boundaries.
+        </p>
+
+        <div class="side-title">SKILLS</div>
+
+        <div class="skills">
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">Java</span>
+            <span class="skill">SQL</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">C#</span>
+            <span class="skill">TypeScript</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Express.js</span>
+            <span class="skill">React</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">SQL Server</span>
+            <span class="skill">SQLite</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+        </div>
+
+      
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="content">
+
+        <section>
+
+            <div class="section-label">PROJECTS</div>
+
+            <div class="projects-grid">
+
+                <!-- ADMIN MARKETPLACE -->
+
+                <div class="project-card">
+
+                    <img src="53329bd8-7db3-4b7e-9bd0-478644b32372-cover.png"
+                    class="project-image"
+                    alt="Admin Marketplace System">
+
+                    <div class="project-content">
+
+                        <h3>Admin Marketplace System</h3>
+
+                        <div class="tags">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>MySQL</span>
+                            <span>REST APIs</span>
+                            <span>Authentication</span>
+                        </div>
+
+                        <p>
+                            A full-stack marketplace management platform
+                            enabling vendor registration, store
+                            management, listings and transactions.
+                        </p>
+
+                        <a href="https://github.com/Frenkiebiggie21" class="read-more">
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- LEVEL GAME -->
+
+                <div class="project-card">
+
+                    <img src="pngtree-game-level-card-with-select-png-image_6011916.jpg"
+                    class="project-image"
+                    alt="Level Time Challenge">
+
+                    <div class="project-content">
+
+                        <h3>Level Time Challenge Game</h3>
+
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Pygame</span>
+                            <span>OOP</span>
+                            <span>Game Logic</span>
+                            <span>Collision Detection</span>
+                        </div>
+
+                        <p>
+                            A 2D Python game featuring timed levels,
+                            scoring mechanisms, progression systems,
+                            and real-time gameplay interactions.
+                        </p>
+
+                        <a href="https://github.com/Frenkiebiggie21/level-time-challenge-portfolio"
+                        class="read-more">
+                        View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- SAFESHARE -->
+
+                <div class="project-card">
+
+                    <img src="7f819a12-724c-476d-a946-462e6ddc8bb8.png"
+                    class="project-image"
+                    alt="SafeShare">
+
+                    <div class="project-content">
+
+                        <h3>SafeShare</h3>
+
+                        <div class="tags">
+                            <span>Java</span>
+                            <span>Android</span>
+                            <span>SQLite</span>
+                            <span>Google Maps API</span>
+                            <span>JSON</span>
+                        </div>
+
+                        <p>
+                            Mobile application focused on cyber
+                            security awareness and community-driven
+                            threat reporting through mobile devices.
+                        </p>
+
+                        <a href="https://github.com/Frenkiebiggie21"
+                        class="read-more">
+                        View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- BILLION BANK -->
+
+                <div class="project-card">
+
+                    <img src="asp-net-logo-png_seeklogo-12071.png"
+                    class="project-image"
+                    alt="Billion Bank">
+
+                    <div class="project-content">
+
+                        <h3>Billion Bank ASP.NET Website & Web Service</h3>
+
+                        <div class="tags">
+                            <span>C#</span>
+                            <span>ASP.NET</span>
+                            <span>Entity Framework</span>
+                            <span>SQL Server</span>
+                        </div>
+
+                        <p>
+                            Banking application demonstrating
+                            account management, web services,
+                            financial transactions and
+                            database integration.
+                        </p>
+
+                        <a href="https://github.com/Frenkiebiggie21"
+                        class="read-more">
+                        View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- AI SECTION -->
+
+        <section class="info-card">
+
+            <div class="section-label">
+                AI ENGINEERING INTERESTS
+            </div>
+
+            <h3>Building Toward AI Engineering</h3>
+
+            <p>
+                I am actively exploring AI Engineering and modern
+                intelligent systems. My focus includes Large
+                Language Models (LLMs), Retrieval-Augmented
+                Generation (RAG), Tool Calling, Agent Memory,
+                Prompt Engineering and Human-in-the-Loop systems.
+            </p>
+
+            <br>
+
+            <p>
+                I am particularly interested in how AI agents differ
+                from traditional automation by interpreting goals,
+                retrieving information, using tools, evaluating
+                outcomes and making decisions within defined
+                constraints.
+            </p>
+
+            <div class="tech-summary">
+                LLMs • Prompt Engineering • RAG • AI Agents • Tool Calling • Agent Memory • Evaluation • Human-in-the-Loop
+            </div>
+
+        </section>
+
+   
+
+        <!-- EDUCATION -->
+
+        <section class="info-card">
+
+            <div class="section-label">EDUCATION</div>
+
+            <div class="education-entry">
+
+                <div class="date">
+                    2025
+                </div>
+
+                <h3>
+                    BSc Honours in Information Technology
+                    (Software Engineering)
+                </h3>
+
+                <p>
+                    Eduvos
+                </p>
+
+            </div>
+
+            <div class="education-entry">
+
+                <div class="date">
+                    2019 - 2022
+                </div>
+
+                <h3>
+                    BSc Information Technology
+                    (Computer Science & Informatics)
+                </h3>
+
+                <p>
+                    University of Johannesburg
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<footer>
+    © <span id="year"></span> Charles Mukwevho
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
